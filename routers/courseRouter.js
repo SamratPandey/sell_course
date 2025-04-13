@@ -12,7 +12,7 @@ courseRouter.post('/preview', (req, res) =>{
         message: "Course created successfully"
     })
 })
-courseRouter.post('/delete', (req, res) =>{
+courseRouter.delete('/delete', (req, res) =>{
     res.status(200).json({
         message: "Course created successfully"
     })
