@@ -128,7 +128,7 @@ adminRouter.get('/course', adminMiddleware, async (req, res)=>{
             })
         }else{
             res.status(201).json({
-                message: "Course fetch successfully",
+                message: "Successful",
                 course: courses
         })
     }
