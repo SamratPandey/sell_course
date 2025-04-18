@@ -1,8 +1,9 @@
+require('dotenv').config()
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const dotenv = require('dotenv');
-dotenv.config();
+const parseCookie = require('cookie-parser')
+
 
 const { connectDB } = require('./config/db')
 const { adminRouter } = require('./routers/adminRouter')
@@ -15,6 +16,7 @@ const { connect } = require('mongoose');
 const app = express();
 
 app.use(cors());
+app.use(parseCookie());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
